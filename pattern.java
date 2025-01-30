@@ -43,6 +43,7 @@
 // * * *       * * *
 // * *           * *
 // *                *
+/* 
 import java.util.Scanner;
 
 public class pattern {
@@ -78,3 +79,61 @@ public class pattern {
     }
     
 }
+*/    
+
+
+// Print The given patten
+//       *
+//     * * * 
+//   * * * * *
+// * * * * * * *
+//   * * * * *
+//     * * * 
+//       *
+
+import java.util.Scanner;
+
+public class pattern {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Value of n: ");
+        int n = sc.nextInt();
+        int i , j;
+        int nsp = n-1;  //no of spaces
+        int nst = 1;    //no of spaces
+        for(i=1;i<=n;i++){
+            int a = 1;
+            for(j=1;j<=nsp;j++){
+                System.out.print(" " +" ");
+            }
+            for(j=1; j<=nst; j++){
+                System.out.print("*"+" ");
+               
+            }   
+            nsp--;
+            nst+=2; 
+            System.out.println();
+        }
+        // 2nd phase
+        nsp = 1;  //no of spaces
+        nst = nst-4;    //no of spaces
+        for(i=1;i<=n;i++){
+            int a = 1;
+            for(j=1;j<=nsp;j++){
+                System.out.print(" " +" ");
+            }
+            for(j=1; j<=nst; j++){
+                System.out.print("*"+" ");
+               
+            }   
+            nsp++;
+            nst-=2; 
+            System.out.println();
+        }
+        sc.close();
+      
+    }
+    
+}
+
+ 
